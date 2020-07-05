@@ -1,5 +1,5 @@
 package com.example.android.quakereport;
-
+//Adding comment to be able to commit. 
 public class Earthquake {
 
     private String mCategory;
