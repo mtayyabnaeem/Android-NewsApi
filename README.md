@@ -5,7 +5,7 @@ App displays multiple news stories extracted from API supported by Guardian. Tou
 
 
 
-Motivation:
+## Motivation:
 The intensive Nanodegree in Android Basics by Google on Udacity ensured that this project did not involve the use of external libraries.
 
 This was my first project using APIs where I had to manually ensure that JSON data was being parsed, and the desired data was extracted with accuracy.  
