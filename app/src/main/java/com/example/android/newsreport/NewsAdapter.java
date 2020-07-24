@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.quakereport;
+package com.example.android.newsreport;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -21,7 +21,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import java.util.List;
 
 /**
@@ -32,13 +31,6 @@ import java.util.List;
  * to be displayed to the user.
  */
 public class NewsAdapter extends ArrayAdapter<News> {
-
-    /**
-     * The part of the location string from the USGS service that we use to determine
-     * whether or not there is a location offset present ("5km N of Cairo, Egypt").
-     */
-    private static final String LOCATION_SEPARATOR = " of ";
-
     /**
      * Constructs a new {@link NewsAdapter}.
      *
@@ -84,6 +76,13 @@ public class NewsAdapter extends ArrayAdapter<News> {
         String extractedDate = currentNews.getDate();
 
         dateView.setText(extractedDate);
+
+
+        TextView nameView = (TextView) listItemView.findViewById((R.id.author));
+
+        String extractedName = currentNews.getName();
+
+        nameView.setText("by " + extractedName);
 
 
 //

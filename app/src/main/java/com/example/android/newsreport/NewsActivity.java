@@ -1,4 +1,4 @@
-package com.example.android.quakereport;
+package com.example.android.newsreport;
 import android.app.LoaderManager;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
@@ -23,7 +23,7 @@ public class NewsActivity extends AppCompatActivity
     private static final String LOG_TAG = NewsActivity.class.getName();
     /** URL for news data from the example Guardian API */
     private static final String NEWS_REQUEST_URL =
-            "https://content.guardianapis.com/search?tag=environment/recycling&api-key=test";
+            "https://content.guardianapis.com/search?q=Careers&show-tags=contributor&api-key=test";
     /**
      * Constant value for the news loader ID. We can choose any integer.
      * This really only comes into play if you're using multiple loaders.

@@ -1,4 +1,4 @@
-package com.example.android.quakereport;
+package com.example.android.newsreport;
 
 public class News {
 
@@ -10,7 +10,7 @@ public class News {
 
     private String mUrl;
 
-
+    private String mName;
 
     public News(String category, String headline, String date) {
         mCategory = category;
@@ -18,13 +18,14 @@ public class News {
         mDate = date;
     }
 
-//    category, headline, c, url
+//    category, headline, date, url
 
-    public News(String category, String headline, String date, String url) {
+    public News(String category, String headline, String date, String url, String name) {
         mCategory = category;
         mHeadline = headline;
         mDate = date;
         mUrl = url;
+        mName = name;
     }
 
     public String getHeadline(){
@@ -39,6 +40,7 @@ public class News {
         return mCategory;
     }
 
+    public String getName(){return mName; }
     /**
      * Returns the website URL to find more information about the news.
      */

@@ -13,15 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.android.quakereport;
+package com.example.android.newsreport;
 
 import android.text.TextUtils;
 import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -178,6 +176,8 @@ public final class QueryUtils {
 
             JSONArray newsArray = newsObject.getJSONArray(  "results");
 
+
+
             // For each news in the newsArray, create an {@link news} object
             for (int i = 0; i < newsArray.length(); i++) {
 
@@ -200,9 +200,21 @@ public final class QueryUtils {
                 // Extract the value for the key called "url"
                 String url = currentNews.getString("webUrl");
 
+                JSONArray tagsArray = currentNews.getJSONArray("tags");
+
+                String name = null;
+
+                for (int j = 0; j < tagsArray.length(); j++) {
+
+                    JSONObject currentTags = tagsArray.getJSONObject(j);
+
+                    name = currentTags.getString("webTitle");
+                }
+
+
                 // Create a new {@link news} object with the magnitude, location, time,
                 // and url from the JSON response.
-                News extractedNews = new News(category, headline, date, url);
+                News extractedNews = new News(category, headline, date, url, name);
 
                 // Add the new {@link news} to the list of news.
                 news.add(extractedNews);
