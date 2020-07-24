@@ -1,4 +1,4 @@
-# Android-NewsApi
+# NewsApi App
 
 ## Description:
 App displays multiple news stories extracted from API supported by Guardian. Touching each story would take you to the url of the story, so user can access full story through their phone's browser.  
