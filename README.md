@@ -1,5 +1,7 @@
 # NewsApi App
 
+![Screenshot_20200724-113938](https://user-images.githubusercontent.com/65341541/90295050-ca338700-de3c-11ea-8708-df50b1bc576f.png)
+
 ## Description:
 App displays multiple news stories extracted from Guardian API. Tapping on each story would enable user access full story through their phone's browser.  
 
